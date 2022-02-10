@@ -38,11 +38,16 @@ To see the module on the menu, you must first set Access Rights to the models
 
 3. Refresh your web browser
 
+4. You must see it in your list of Apps
+
+<img src="static/description/set_AR.png" alt="drawing" width="700"/>
+
 ### Features:
 
 + Computation of calories based on protein/fat/carbohydrates and amount of food
 + List of recipes
 + List of ingredients
 + List of instructions
++ Demo example of four recipes with instructions (only one of the recipes) and ingredients
 + Translation languages available: Spanish and Catalan
 
