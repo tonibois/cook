@@ -12,7 +12,9 @@ Cooking module for Odoo 15.0. First version (February 2022)
 
 ### To install this module:
 
-1. Download the project: git clone 
+1. Download the project: 
+ + .Using git:   git clone https://github.com/tonibois/cook.git
+ + .Download ZIP
 2. Unzip in your odoo/addons folder
 3. Launch odoo service using developer mode (./odoo-bin --dev=all -d=mydb -c odoo.conf)
 4. Entry on your local odoo using web browser (https://localhost:8069)
