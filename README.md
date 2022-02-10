@@ -18,7 +18,7 @@ To see the module on the menu, you must first set Access Rights to the models
 2. Set the next permissions 
 
 
-<img src="static/description/set_AR.png" alt="drawing" width="400"/>
+<img src="static/description/set_AR.png" alt="drawing" width="700"/>
 
 <!-- ![set_permiss](static/description/set_AR.png) -->
 
