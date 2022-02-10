@@ -17,7 +17,7 @@ Cooking module for Odoo 15.0. First version (8th of February 2022)
  + Download ZIP
 2. Unzip in your odoo/addons folder
 3. Launch odoo service using developer mode (./odoo-bin --dev=all -d=mydb -c odoo.conf)
-4. Entry on your local odoo using web browser (https://localhost:8069)
+4. Entry on your local odoo using web browser (http://localhost:8069/web/login)
 5. If not set developer mode go to settings and at the bottom of the page activate it
 6. Go to Apps and Update packates
 7. Update list packages
