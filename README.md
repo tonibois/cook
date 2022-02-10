@@ -2,7 +2,9 @@
 
 Cooking module for Odoo 15.0. First version (February 2022)
 
-Derived ER diagram 
+
+**Derived ER diagram:**
+------
 
 ![A test image](static/description/Cook_ER_diagram.png)
 
