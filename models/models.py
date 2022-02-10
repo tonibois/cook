@@ -36,7 +36,7 @@ class recipe(models.Model):
          for record in self:
              record.datetime_end = record.datetime_begin + timedelta(minutes=record.timelabor)
 
-     @api.depends('cshellfish','cpeanuts','cwheat','ceggs','cmilk','cfish','csoybean','ctreenuts')
+     @api.onchange('cshellfish','cpeanuts','cwheat','ceggs','cmilk','cfish','csoybean','ctreenuts')
      def _allerg(self):
           self.allergen = self.cshellfish or self.cwheat or self.cpeanuts or self.cmilk or self.ceggs or self.cfish or self.csoybean or self.ctreenuts
 
@@ -62,7 +62,7 @@ class ingredient(models.Model):
      #help="Must be expressed in g")
      recipe_ids = fields.Many2many('cook.recipe',string='recipes')
 
-     @api.depends('carbh','protein','fat','amount')
+     @api.onchange('carbh','protein','fat','amount')
      def _calcomp(self):
           self.calories = ( self.carbh*4 + self.protein*4 + self.fat*9 ) *self.amount / 100
 
