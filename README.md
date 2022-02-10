@@ -28,9 +28,9 @@ Cooking module for Odoo 15.0. First version (February 2022)
 
 To see the module on the menu, you must first set Access Rights to the models
 
-1. Go to --> Developer mode --> Technical --> Acces Rights 
+1. Go to: 
+ + Settings --> Technical --> Acces Rights 
 2. Set the next permissions 
-
 
 <img src="static/description/set_AR.png" alt="drawing" width="700"/>
 
