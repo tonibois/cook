@@ -1,6 +1,6 @@
 # cookodoo
 
-Cooking module for Odoo 15.0. First version (February 2022)
+Cooking module for Odoo 15.0. First version (8th of February 2022)
 
 
 **Derived ER diagram:**
