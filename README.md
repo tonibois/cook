@@ -40,7 +40,7 @@ To see the module on the menu, you must first set Access Rights to the models
 
 4. You must see it in your list of Apps
 
-<img src="static/description/set_AR.png" alt="drawing" width="700"/>
+<img src="static/description/ModuleInterface.png" alt="drawing" width="700"/>
 
 ### Features:
 
