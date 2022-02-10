@@ -3,12 +3,6 @@
 from odoo import models, fields, api
 from datetime import date, timedelta
 
-# El modelo debe poder calcular el tiempo total de receta a partir de tiempos de instruccion
-# se calculara si un alimento es alergeno o no y se marcara en rojo (danger)
-# se mejorara el diseño y se incluira alguna vista kanban y una vista de calendario
-# se agruparan datos como recetas por tipo de coccion
-# se ordenaran por defecto las instrucciones de las recetas en funcion del paso
-
 class recipe(models.Model):
      _name = 'cook.recipe'
      _description = 'Cooking recipes'
