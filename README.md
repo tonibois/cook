@@ -6,7 +6,9 @@ Cooking module for Odoo 15.0. First version (February 2022)
 **Derived ER diagram:**
 ------
 
-![A test image](static/description/Cook_ER_diagram.png)
+<img src="static/description/Cook_ER_diagram.png" alt="drawing" width="400"/>
+
+<!-- ![A test image](static/description/Cook_ER_diagram.png) -->
 
 ### After installing the module set security settings:
 
