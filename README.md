@@ -36,6 +36,8 @@ To see the module on the menu, you must first set Access Rights to the models
 
 <!-- ![set_permiss](static/description/set_AR.png) -->
 
+3. Refresh your web browser
+
 ### Features:
 
 + Computation of calories based on protein/fat/carbohydrates and amount of food
