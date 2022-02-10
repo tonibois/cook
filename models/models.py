@@ -36,7 +36,7 @@ class recipe(models.Model):
          for record in self:
              record.datetime_end = record.datetime_begin + timedelta(minutes=record.timelabor)
 
-     @api.onchange('cshellfish','cpeanuts','cwheat','ceggs','cmilk','cfish','csoybean','ctreenuts')
+     @api.depends('cshellfish','cpeanuts','cwheat','ceggs','cmilk','cfish','csoybean','ctreenuts')
      def _allerg(self):
           self.allergen = self.cshellfish or self.cwheat or self.cpeanuts or self.cmilk or self.ceggs or self.cfish or self.csoybean or self.ctreenuts
 
