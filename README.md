@@ -6,7 +6,7 @@ Cooking module for Odoo 15.0. First version (February 2022)
 **Derived ER diagram:**
 ------
 
-<img src="static/description/Cook_ER_diagram.png" alt="drawing" width="400"/>
+<img src="static/description/Cook_ER_diagram.png" alt="drawing" width="300"/>
 
 <!-- ![A test image](static/description/Cook_ER_diagram.png) -->
 
@@ -15,7 +15,12 @@ Cooking module for Odoo 15.0. First version (February 2022)
 To see the module on the menu, you must first set Access Rights to the models
 
 1. Go to --> Developer mode --> Technical --> Acces Rights 
-2. Set the next permissions ![set_permiss](static/description/set_AR.png)
+2. Set the next permissions 
+
+
+<img src="static/description/set_AR.png" alt="drawing" width="400"/>
+
+<!-- ![set_permiss](static/description/set_AR.png) -->
 
 ### Features:
 
