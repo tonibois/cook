@@ -1,0 +1,168 @@
+<odoo>
+    <data>
+        <record id="recipe_1" model="cook.recipe">
+            <field name="name">Coca de verduras</field>
+            <field name="description">Plato mallorquin</field>
+            <field name="timelabor">110</field>
+            <field name="cooktype">none</field>
+            <field name="datetime_begin" eval="datetime.now()+timedelta(days=1)"/>
+        </record>
+
+        <record id="recipe_2" model="cook.recipe">
+            <field name="name">Trampo</field>
+            <field name="description">Plato mallorquin</field>
+            <field name="timelabor">10</field>
+            <field name="cooktype">none</field>
+            <field name="datetime_begin" eval="datetime.now()+timedelta(days=2)"/>
+        </record>
+
+        <record id="recipe_3" model="cook.recipe">
+            <field name="name">Ensalada de pasta con atún</field>
+            <field name="description">Plato de pasta de verano que se acompaña con atún, nueces y aceitunas de anchoa </field>
+            <field name="timelabor">20</field>
+            <field name="cooktype">none</field>
+            <field name="datetime_begin" eval="datetime.now()+timedelta(days=3)"/>
+        </record>
+
+        <record id="recipe_4" model="cook.recipe">
+            <field name="name">Ensalada de patata y huevo</field>
+            <field name="description">Plato de verduras</field>
+            <field name="timelabor">40</field>
+            <field name="cooktype">none</field>
+            <field name="datetime_begin" eval="datetime.now()+timedelta(days=4)"/>
+        </record>
+
+        <record id="instructions_1_1" model="cook.instruction">
+          <field name="name">Preparamos la masa</field>
+          <field name="description">Mezclamos 500gr de harina con un vaso de aceite (200) mL y un vaso de cerveza amasando bien hasta que la harina no se adhiera a los dedos</field>
+          <field name="step">1</field>
+          <field name="recipe_id" ref="recipe_1"/>
+          <field name="timeinstr">15</field>
+        </record>
+
+        <record id="instructions_1_2" model="cook.instruction">
+          <field name="name">Cortamos las verduras</field>
+          <field name="description">Mientras dejamos reposar la masa (10 min), cortamos dos tomates (400g), dos pimientos blancos (300 g) y una cebolla (300 g)</field>
+          <field name="step">2</field>
+          <field name="recipe_id" ref="recipe_1"/>
+          <field name="timeinstr">10</field>
+        </record>
+
+        <record id="instructions_1_3" model="cook.instruction">
+          <field name="name">Esparcimos la masa</field>
+          <field name="description">Esparcimos la masa sobre un recipiente metálico rectangular y añadimos las verduras cortadas</field>
+          <field name="step">3</field>
+          <field name="recipe_id" ref="recipe_1"/>
+          <field name="timeinstr">5</field>
+        </record>
+
+        <record id="instructions_1_4" model="cook.instruction">
+          <field name="name">Metemos la masa en el horno</field>
+          <field name="description">Añadimos aceite, sal, pimienta negra y metemos el conjunnto en el horno a unos 200 grados, unos 40 minutos</field>
+          <field name="step">4</field>
+          <field name="recipe_id" ref="recipe_1"/>
+          <field name="timeinstr">40</field>
+        </record>
+
+         <record id="ingredients_1_1" model="cook.ingredient">
+          <field name="name">tomate</field>
+          <field name="description">los tomates pesan unos 250 g por unidad. Los tipos más sabrosos son el tomate de la rosa o el de ensalada. En verano se pueden sembrar regandolos cada dos días con una cantidad de agua proporcional al tamaño de la tomatera </field>
+          <field name="amount">250</field>
+          <field name="recipe_ids" eval="[(6, 0, [ref('recipe_1'), ref('recipe_2'), ref('recipe_3'), ref('recipe_4')])]"/>
+          <field name="carbh">3.9</field>
+          <field name="protein">0.5</field>
+          <field name="fat">0.2</field>
+        </record>
+
+         <record id="ingredients_1_2" model="cook.ingredient">
+          <field name="name">pimientos blancos</field>
+          <field name="description">También se pueden utilizar conjuntamente con pimientos rojos y verdes</field>
+          <field name="recipe_ids" eval="[(6, 0, [ref('recipe_1'), ref('recipe_2')])]"/>
+          <field name="carbh">3.7</field>
+          <field name="protein">0.9</field>
+          <field name="fat">0.2</field>
+        </record>
+
+         <record id="ingredients_1_3" model="cook.ingredient">
+          <field name="name">cebolla</field>
+          <field name="description">Si lloras cuando la cortas, utiliza un cuchillo fino...y, si estas solo, ponte unas gafas de buceo</field>
+          <field name="recipe_ids" eval="[(6, 0, [ref('recipe_1'), ref('recipe_2')])]"/>
+          <field name="carbh">10.1</field>
+          <field name="protein">0.9</field>
+          <field name="fat">0.1</field>
+        </record>
+
+         <record id="ingredients_1_4" model="cook.ingredient">
+          <field name="name">harina</field>
+          <field name="description">harina de fuerza</field>
+          <field name="recipe_ids" eval="[(6, 0, [ref('recipe_1')])]"/>
+          <field name="carbh">70</field>
+          <field name="protein">12</field>
+          <field name="fat">2</field>
+        </record>
+
+         <record id="ingredients_1_5" model="cook.ingredient">
+          <field name="name">aceite</field>
+          <field name="description">aceite de oliva virgen extra preferentemente</field>
+          <field name="recipe_ids" eval="[(6, 0, [ref('recipe_1'), ref('recipe_2'), ref('recipe_3'), ref('recipe_4')])]"/>
+          <field name="carbh">0</field>
+          <field name="protein">0</field>
+          <field name="fat">100</field>
+        </record>
+
+         <record id="ingredients_3_1" model="cook.ingredient">
+          <field name="name">pasta</field>
+          <field name="description">Se recomiendan raciones de entre 60-80gr de pasta por persona</field>
+          <field name="recipe_ids" eval="[(6, 0, [ref('recipe_3')])]"/>
+          <field name="carbh">66</field>
+          <field name="protein">12</field>
+          <field name="fat">2</field>
+        </record>
+
+         <record id="ingredients_3_2" model="cook.ingredient">
+          <field name="name">atún</field>
+          <field name="description">En aceite de oliva preferentemente o en agua para una dieta baja en calorías</field>
+          <field name="recipe_ids" eval="[(6, 0, [ref('recipe_1'), ref('recipe_2'), ref('recipe_3'), ref('recipe_4')])]"/>
+          <field name="carbh">1</field>
+          <field name="protein">19</field>
+          <field name="fat">31</field>
+        </record>
+
+         <record id="ingredients_3_3" model="cook.ingredient">
+          <field name="name">aceitunas</field>
+          <field name="description">En aceite de oliva preferentemente o en agua para una dieta baja en calorías</field>
+          <field name="recipe_ids" eval="[(6, 0, [ref('recipe_1'), ref('recipe_2'), ref('recipe_3'), ref('recipe_4')])]"/>
+          <field name="carbh">0.9</field>
+          <field name="protein">1.6</field>
+          <field name="fat">15</field>
+        </record>
+
+         <record id="ingredients_3_4" model="cook.ingredient">
+          <field name="name">nueces</field>
+          <field name="description">fruto seco con alto contenido en grasas saludables</field>
+          <field name="recipe_ids" eval="[(6, 0, [ref('recipe_1'), ref('recipe_2'), ref('recipe_3'), ref('recipe_4')])]"/>
+          <field name="carbh">2.2</field>
+          <field name="protein">17</field>
+          <field name="fat">70</field>
+        </record>
+
+         <record id="ingredients_4_1" model="cook.ingredient">
+          <field name="name">huevo</field>
+          <field name="description">Se recomiendan huevos camperos</field>
+          <field name="recipe_ids" eval="[(6, 0, [ref('recipe_4')])]"/>
+          <field name="carbh">0.4</field>
+          <field name="protein">8.2</field>
+          <field name="fat">7.8</field>
+        </record>
+
+         <record id="ingredients_4_2" model="cook.ingredient">
+          <field name="name">patata</field>
+          <field name="description">El patató (patata pequeña) se hace más rápidamente, se recomienda patata de sa Pobla</field>
+          <field name="recipe_ids" eval="[(6, 0, [ref('recipe_4')])]"/>
+          <field name="carbh">15.7</field>
+          <field name="protein">1.7</field>
+          <field name="fat">0.1</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,188 @@
+<odoo>
+  <data>
+
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="cook.recipe_list">
+      <field name="name">cook list</field>
+      <field name="model">cook.recipe</field>
+      <field name="arch" type="xml">
+        <tree decoration-bf="cooktype=='oven'" decoration-it="isvegan==True" decoration-danger="allergen==True">
+          <field name="name"/>
+          <field name="description"/>
+          <field name="allergen"/>
+          <field name="datetime_begin" string="Start date"/>
+          <field name="timelabor" string="time elabor"/>
+          <field name="cooktype" string="cook type"/>
+          <field name="isvegan" string="is vegan"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="cook.recipe_form">
+        <field name="name">cook form</field>
+        <field name="model">cook.recipe</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Recipes">
+                <sheet>
+                  <group>
+                    <group>
+                      <field name="name" />
+                      <field name="description"/>
+                      <field name="datetime_begin" string="Start date"/>
+                      <field name="timelabor" string="time"/>
+                      <field name="cooktype" string="cook type" widget="selection"/>
+                    </group>
+                    <group>
+                      <field name="isvegan" string="Is vegan"/>
+                      <field name="ultraproc" string="Ultraprocessed"/>
+                      <field name="ceggs" string="eggs"/>
+                      <field name="cfish" string="fish"/>
+                      <field name="cshellfish" string="shellfish"/>
+                      <field name="cpeanuts" string="Peanuts"/>
+                      <field name="ctreenuts" string="Tree Peanuts"/>
+                      <field name="cwheat" string="Wheat"/>
+                      <field name="csoybean" string="Soybeans"/>
+                      <field name="allergen" string="Allergen"/>
+                    </group>
+                  </group>
+                  <group>
+                    <field name="instruction_ids" colspan="4"/>
+                    <field name="ingredient_ids"/>
+                     <!-- <field name="amount_ids" /> -->
+                  </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- calendar view -->
+    <record model="ir.ui.view" id="cook.recipe_calendar">
+        <field name="name">cook recipe calendar</field>
+        <field name="model">cook.recipe</field>
+        <field name="arch" type="xml">
+            <calendar string="Recipe Calendar" date_start="datetime_begin" color="cooktype" mode="month">
+                <field name="name"/>
+                <!--<field name="cooktype"/>
+                <field name="description"/> -->
+            </calendar>
+        </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="cook.recipe_action_window">
+      <field name="name">cook window</field>
+      <field name="res_model">cook.recipe</field>
+      <field name="view_mode">tree,calendar,form</field>
+      <field name="context">{'search_default_opened': True}</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="cook.recipe_calendar_action_window">
+      <field name="name">Recipe calendar</field>
+      <field name="res_model">cook.recipe</field>
+      <field name="view_mode">calendar</field>
+    </record>
+
+    <record model="ir.ui.view" id="cook.instruction_list">
+      <field name="name">Instruction list</field>
+      <field name="model">cook.instruction</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="step"/>
+          <field name="description"/>
+          <field name="recipe_id" string="recipe"/>
+          <field name="timeinstr" string="time"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="cook.instruction_action_window">
+      <field name="name">cooking instruction action</field>
+      <field name="res_model">cook.instruction</field>
+      <field name="view_mode">tree</field>
+    </record>
+
+      <!-- tree view for Ingredients-->
+    <record model="ir.ui.view" id="cook.ingredient_list">
+      <field name="name">Ingredient list</field>
+      <field name="model">cook.ingredient</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="calories"/>
+          <!--<field name="units" /> -->
+          <field name="description"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- form view for Ingredients -->
+    <record model="ir.ui.view" id="cook.ingredient_form">
+      <field name="name">Ingredient form</field>
+      <field name="model">cook.ingredient</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Ingredients">
+          <sheet>
+            <group>
+              <field name="name" />
+              <field name="description" />
+              <field name="recipe_ids" />
+            </group>
+            <group>
+              <field name="carbh" string="Carbohydrates" colspan="4"/>
+              <field name="protein" string="Protein"/>
+              <field name="fat" string="Fat"/>
+              <field name="calories" string="Calories"/>
+              <field name="amount"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <!-- actions for Ingredients-->
+
+    <record model="ir.actions.act_window" id="cook.ingredient_action_window">
+      <field name="name">cook ingredient action</field>
+      <field name="res_model">cook.ingredient</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="recetas.action_server">
+      <field name="name">recetas server</field>
+      <field name="model_id" ref="model_recetas_recetas"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+
+    <menuitem name="cook" id="cook.menu_root" web_icon="cook,static/description/icon.png"/>
+
+    <!-- menu categories -->
+    <menuitem name="Config" id="cook.menu_3" parent="cook.menu_root" sequence="4"/>
+    <menuitem name="Recipes" id="cook.menu_1b" parent="cook.menu_root" sequence="1" action="cook.recipe_action_window"/>
+    <menuitem name="Calendar" id="cook.menu_1a" parent="cook.menu_root" sequence="3"
+              action="cook.recipe_calendar_action_window"/>
+    <!-- actions -->
+    <menuitem name="Ingredients" id="cook.menu_3_1" parent="cook.menu_3" sequence="5"
+              action="cook.ingredient_action_window"/>
+    <menuitem name="Instructions" id="cook.menu_3_2" parent="cook.menu_3" sequence="6"
+              action="cook.instruction_action_window"/>
+
+  </data>
+</odoo>

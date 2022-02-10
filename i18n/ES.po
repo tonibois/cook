@@ -1,0 +1,411 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* cook
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-10 17:39+0000\n"
+"PO-Revision-Date: 2022-02-10 18:48+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__allergen
+#: model_terms:ir.ui.view,arch_db:cook.recipe_form
+msgid "Allergen"
+msgstr "Alergeno"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_ingredient__amount
+#: model:ir.model.fields,field_description:cook.field_cook_instruction__amount
+msgid "Amount"
+msgstr "Cantidad"
+
+#. module: cook
+#: model:ir.ui.menu,name:cook.menu_1a
+msgid "Calendar"
+msgstr "Calendario"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_ingredient__calories
+#: model_terms:ir.ui.view,arch_db:cook.ingredient_form
+msgid "Calories"
+msgstr "Calorías"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_ingredient__carbh
+msgid "Carbh"
+msgstr "Hidratos de carbono"
+
+#. module: cook
+#: model_terms:ir.ui.view,arch_db:cook.ingredient_form
+msgid "Carbohydrates"
+msgstr "Hidratos de Carbono"
+
+#. module: cook
+#: model:ir.ui.menu,name:cook.menu_3
+msgid "Config"
+msgstr "Configuración"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__cooktype
+msgid "Cook type"
+msgstr "Tipo de cocción"
+
+#. module: cook
+#: model:ir.model,name:cook.model_cook_recipe
+msgid "Cooking recipes"
+msgstr "Recetas de cocina"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_ingredient__create_uid
+#: model:ir.model.fields,field_description:cook.field_cook_instruction__create_uid
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_ingredient__create_date
+#: model:ir.model.fields,field_description:cook.field_cook_instruction__create_date
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__create_date
+msgid "Created on"
+msgstr "Fecha de creación"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__datetime_begin
+msgid "Datetime"
+msgstr "Fecha"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__datetime_end
+msgid "Datetime End"
+msgstr "Fecha de fin"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_ingredient__description
+#: model:ir.model.fields,field_description:cook.field_cook_instruction__description
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_ingredient__display_name
+#: model:ir.model.fields,field_description:cook.field_cook_instruction__display_name
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__display_name
+msgid "Display Name"
+msgstr "Muestra el nombre"
+
+#. module: cook
+#: model:ir.model.fields.selection,name:cook.selection__cook_recipe__state__eated
+msgid "Eated"
+msgstr "Finalizado"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__ceggs
+msgid "Eggs"
+msgstr "Huevos"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__employee_ids
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_ingredient__fat
+#: model_terms:ir.ui.view,arch_db:cook.ingredient_form
+msgid "Fat"
+msgstr "Grasas"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__cfish
+msgid "Fish"
+msgstr "Pescado"
+
+#. module: cook
+#: model:ir.model.fields.selection,name:cook.selection__cook_recipe__cooktype__grill
+msgid "Grill"
+msgstr "Parrilla"
+
+#. module: cook
+#: model:ir.model.fields.selection,name:cook.selection__cook_recipe__state__heating
+msgid "Heating"
+msgstr "Calentando"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_ingredient__id
+#: model:ir.model.fields,field_description:cook.field_cook_instruction__id
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__id
+msgid "ID"
+msgstr "ID"
+
+#. module: cook
+#: model:ir.ui.menu,name:cook.menu_3_1
+#: model_terms:ir.ui.view,arch_db:cook.ingredient_form
+msgid "Ingredients"
+msgstr "Ingredientes"
+
+#. module: cook
+#: model:ir.ui.menu,name:cook.menu_3_2
+msgid "Instructions"
+msgstr "Instrucciones"
+
+#. module: cook
+#: model_terms:ir.ui.view,arch_db:cook.recipe_form
+msgid "Is vegan"
+msgstr "Vegano"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_ingredient____last_update
+#: model:ir.model.fields,field_description:cook.field_cook_instruction____last_update
+#: model:ir.model.fields,field_description:cook.field_cook_recipe____last_update
+msgid "Last Modified on"
+msgstr "Fecha de última modificación "
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_ingredient__write_uid
+#: model:ir.model.fields,field_description:cook.field_cook_instruction__write_uid
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__write_uid
+msgid "Last Updated by"
+msgstr "última actualización realizada por"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_ingredient__write_date
+#: model:ir.model.fields,field_description:cook.field_cook_instruction__write_date
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__write_date
+msgid "Last Updated on"
+msgstr "Fecha de última actualización"
+
+#. module: cook
+#: model:ir.model.fields.selection,name:cook.selection__cook_recipe__cooktype__micro
+msgid "Microwave"
+msgstr "Microondas"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__cmilk
+msgid "Milk"
+msgstr "Leche"
+
+#. module: cook
+#: model:ir.model.fields.selection,name:cook.selection__cook_recipe__cooktype__mix
+msgid "Mixture"
+msgstr "Mezcla"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_ingredient__name
+#: model:ir.model.fields,field_description:cook.field_cook_instruction__name
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: cook
+#: model:ir.model.fields.selection,name:cook.selection__cook_recipe__cooktype__none
+msgid "None"
+msgstr "Ninguno"
+
+#. module: cook
+#: model:ir.model.fields.selection,name:cook.selection__cook_recipe__state__not_started
+msgid "Not started"
+msgstr "No empezado"
+
+#. module: cook
+#: model:ir.model.fields.selection,name:cook.selection__cook_recipe__cooktype__oven
+msgid "Oven"
+msgstr "Horno"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__cpeanuts
+#: model_terms:ir.ui.view,arch_db:cook.recipe_form
+msgid "Peanuts"
+msgstr "cacahuetes"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_ingredient__protein
+#: model_terms:ir.ui.view,arch_db:cook.ingredient_form
+msgid "Protein"
+msgstr "proteinas"
+
+#. module: cook
+#: model:ir.model.fields.selection,name:cook.selection__cook_recipe__state__ready
+msgid "Ready"
+msgstr "Preparado"
+
+#. module: cook
+#: model_terms:ir.ui.view,arch_db:cook.recipe_calendar
+msgid "Recipe Calendar"
+msgstr "Calendario de recetas"
+
+#. module: cook
+#: model:ir.actions.act_window,name:cook.recipe_calendar_action_window
+msgid "Recipe calendar"
+msgstr "calendario de recetas"
+
+#. module: cook
+#: model:ir.ui.menu,name:cook.menu_1b
+#: model_terms:ir.ui.view,arch_db:cook.recipe_form
+msgid "Recipes"
+msgstr "Recetas"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__cshellfish
+msgid "Shell Fish"
+msgstr "Marisco"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__csoybean
+#: model_terms:ir.ui.view,arch_db:cook.recipe_form
+msgid "Soybeans"
+msgstr "Soja"
+
+#. module: cook
+#: model_terms:ir.ui.view,arch_db:cook.recipe_form
+#: model_terms:ir.ui.view,arch_db:cook.recipe_list
+msgid "Start date"
+msgstr "Fecha de inicio"
+
+#. module: cook
+#: model:ir.model.fields.selection,name:cook.selection__cook_recipe__state__started
+msgid "Started"
+msgstr "Empezado"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__state
+msgid "State"
+msgstr "Estado"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_instruction__step
+msgid "Step"
+msgstr "Paso"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_instruction__timeinstr
+msgid "Timeinstr"
+msgstr "Tiempo de ejecución"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__timelabor
+msgid "Timelabor"
+msgstr "Tiempo de elaboración"
+
+#. module: cook
+#: model_terms:ir.ui.view,arch_db:cook.recipe_form
+msgid "Tree Peanuts"
+msgstr "Cacahuetes de árbol"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__ctreenuts
+msgid "Tree nuts"
+msgstr "Frutos secos de árbol"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__ultraproc
+#: model_terms:ir.ui.view,arch_db:cook.recipe_form
+msgid "Ultraprocessed"
+msgstr "Ultraprocesado"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__isvegan
+msgid "Vegan"
+msgstr "Vegano"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__cwheat
+#: model_terms:ir.ui.view,arch_db:cook.recipe_form
+msgid "Wheat"
+msgstr "Trigo"
+
+#. module: cook
+#: model:ir.ui.menu,name:cook.menu_root
+msgid "cook"
+msgstr "Cocina"
+
+#. module: cook
+#: model:ir.actions.act_window,name:cook.ingredient_action_window
+msgid "cook ingredient action"
+msgstr ""
+
+#. module: cook
+#: model_terms:ir.ui.view,arch_db:cook.recipe_form
+#: model_terms:ir.ui.view,arch_db:cook.recipe_list
+msgid "cook type"
+msgstr "Tipo de cocción"
+
+#. module: cook
+#: model:ir.actions.act_window,name:cook.recipe_action_window
+msgid "cook window"
+msgstr "Menú de recetas"
+
+#. module: cook
+#: model:ir.model,name:cook.model_cook_ingredient
+msgid "cooking ingredients"
+msgstr "Ingredientes para cocinar"
+
+#. module: cook
+#: model:ir.actions.act_window,name:cook.instruction_action_window
+msgid "cooking instruction action"
+msgstr "¡"
+
+#. module: cook
+#: model:ir.model,name:cook.model_cook_instruction
+msgid "cooking instructions"
+msgstr "Instrucciones para cocinar"
+
+#. module: cook
+#: model_terms:ir.ui.view,arch_db:cook.recipe_form
+msgid "eggs"
+msgstr "Huevos"
+
+#. module: cook
+#: model_terms:ir.ui.view,arch_db:cook.recipe_form
+msgid "fish"
+msgstr "pescado"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__ingredient_ids
+msgid "ingredients"
+msgstr "ingredientes"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_recipe__instruction_ids
+msgid "instructions"
+msgstr "instrucciones"
+
+#. module: cook
+#: model_terms:ir.ui.view,arch_db:cook.recipe_list
+msgid "is vegan"
+msgstr "Es vegano"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_instruction__recipe_id
+#: model_terms:ir.ui.view,arch_db:cook.instruction_list
+msgid "recipe"
+msgstr "receta"
+
+#. module: cook
+#: model:ir.model.fields,field_description:cook.field_cook_ingredient__recipe_ids
+msgid "recipes"
+msgstr "recetas"
+
+#. module: cook
+#: model_terms:ir.ui.view,arch_db:cook.recipe_form
+msgid "shellfish"
+msgstr "marisco"
+
+#. module: cook
+#: model_terms:ir.ui.view,arch_db:cook.instruction_list
+#: model_terms:ir.ui.view,arch_db:cook.recipe_form
+msgid "time"
+msgstr "tiempo"
+
+#. module: cook
+#: model_terms:ir.ui.view,arch_db:cook.recipe_list
+msgid "time elabor"
+msgstr "tiempo de elaboración"
