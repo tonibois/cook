@@ -50,4 +50,3 @@ To see the module on the menu, you must first set Access Rights to the models
 + List of instructions
 + Demo example of four recipes with instructions (only one of the recipes) and ingredients
 + Translation languages available: Spanish and Catalan
-
