@@ -7,7 +7,7 @@ Based on The next UML Class diagram ![A test image](static/description/cook.png)
 ## After installing the module set security settings
 
 1. Go to --> Developer mode --> Technical --> Acces Rights 
-2. Set the next permissions ![set_permiss](static/description/permissions.png)
+2. Set the next permissions ![set_permiss](static/description/set_AR.png)
 
 ## Features:
 
