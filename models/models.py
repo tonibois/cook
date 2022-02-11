@@ -64,7 +64,6 @@ class instruction(models.Model):
      _description='cooking instructions'
 
      name = fields.Char()
-     amount=fields.Integer()
      description = fields.Text()
      step = fields.Integer()
      recipe_id = fields.Many2one('cook.recipe', string='recipe')
