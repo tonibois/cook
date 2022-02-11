@@ -44,6 +44,9 @@ To see the module on the menu after installation you can edit Access Rights to t
 
 <img src="static/description/ModuleInterface.png" alt="drawing" width="700"/>
 
+
+**Note: To make @api decorators working properly, after installation of the module you can change the @api.onchange to @api.depends on calories and allergen functions**
+
 ### Features:
 
 + Computation of calories based on protein/fat/carbohydrates and amount of food
