@@ -2,6 +2,18 @@
 
 Cooking module for Odoo 15.0. First version (8th of February 2022)
 
+**How the module works**
++ It has three classes:
+  + Aa Recipe class whith One2Many relation with 
+  + instructions class 
+  + And Many2Many relations with ingredients class.
+
++ Form and list views are available for Recipes, Instructions and Ingredients
++ Calendar is available for Recipes
++ Alergen information decorates the recipe table when is true with danger decorator (red color)
++ Computation of calories based on protein/fat/carbohydrates and amount of food
++ Demo example of four recipes with instructions (only one of the recipes) and ingredients
++ Translation languages available: Spanish and Catalan
 
 **Derived ER diagram:**
 ------
@@ -47,11 +59,3 @@ To see the module on the menu after installation you can edit Access Rights to t
 
 **Note: To make @api decorators working properly, after installation of the module you can change the @api.onchange to @api.depends on calories and allergen functions**
 
-### Features:
-
-+ Computation of calories based on protein/fat/carbohydrates and amount of food
-+ List of recipes
-+ List of ingredients
-+ List of instructions
-+ Demo example of four recipes with instructions (only one of the recipes) and ingredients
-+ Translation languages available: Spanish and Catalan
