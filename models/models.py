@@ -40,13 +40,6 @@ class recipe(models.Model):
      def _allerg(self):
           self.allergen = self.cshellfish or self.cwheat or self.cpeanuts or self.cmilk or self.ceggs or self.cfish or self.csoybean or self.ctreenuts
 
-#     @api.depends('timeinstr')
-#     def _compute_time_lab(self):
-#         aux=0
-#         for record in self:
-#             aux = record.timeinstr+aux
-#         self.timelabor=aux
-
 class ingredient(models.Model):
      _name ='cook.ingredient'
      _description='cooking ingredients'
