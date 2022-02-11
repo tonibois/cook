@@ -4,9 +4,9 @@ Cooking module for Odoo 15.0. First version (8th of February 2022)
 
 **How the module works**
 + It has three classes:
-  + A main recipe class whith One2Many relation with 
-  + instructions class 
-  + And Many2Many relations with ingredients class.
+  + A main **recipe** class whith One2Many relation with 
+  + **instruction** class 
+  + And Many2Many relations with **ingredients** class.
 
 + Form and list views are available for Recipes, Instructions and Ingredients
 + Calendar is available for Recipes
