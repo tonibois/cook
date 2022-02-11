@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+master_cook_recipe_management,cook.recipe_master,model_cook_recipe,group_cook_master,1,1,1,1
+master_cook_ingredients_management,cook.ingredient_master,model_cook_ingredient,group_cook_master,1,1,1,1
+master_cook_instruction_management,cook.instruction_master,model_cook_instruction,group_cook_master,1,1,1,1
+manager_cook_recipe_management,cook.recipe_manager,model_cook_recipe,group_cook_manager,1,1,1,1
+manager_cook_ingredients_management,cook.ingredient_manager,model_cook_ingredient,group_cook_manager,1,1,1,1
+manager_cook_instruction_management,cook.instruction_manager,model_cook_instruction,group_cook_manager,1,1,1,1
