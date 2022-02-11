@@ -16,7 +16,7 @@ Cooking module for Odoo 15.0. First version (8th of February 2022)
 + Demo example of four recipes with instructions (only one of the recipes) and ingredients
 + Translation languages available: Spanish and Catalan
 
-**Derived ER diagram:**
+**Derived ER diagram (from DBeaver access to postgres DB):**
 ------
 
 <img src="static/description/Cook_ER_diagram.png" alt="drawing" width="300"/>
