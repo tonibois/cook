@@ -15,10 +15,10 @@ Cooking module for Odoo 15.0. First version (8th of February 2022)
 + **Form** and **list** views are available for Recipes, Instructions and Ingredients
 + **Kanban** and **calendar** are available for Recipes
 + In config menu there's an access to ingredients and instructions lists
-+ Alergen information decorates the recipe table when is true with danger decorator (red color)
-+ Computation of calories based on protein/fat/carbohydrates and amount of food
-+ Demo example of four recipes with instructions (only one of the recipes) and ingredients
-+ Translation languages available: Spanish and Catalan
++ 8 allergen types: allegeren information decorates the recipe table when is true with danger decorator (red color). But requires change to @api.depends decorator after installation. Based on the main eight allergen types (https://www.fda.gov/food/food-labeling-nutrition/food-allergies)
++ Computation of calories based on protein/fat/carbohydrates and amount of food 
++ Demo example of four recipes with instructions (only one of the recipes) and ingredients.
++ Translation languages available: Spanish and Catalan.
 
 **Derived ER diagram (from DBeaver access to postgres DB)**
 ------
