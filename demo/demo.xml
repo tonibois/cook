@@ -8,7 +8,7 @@
             <field name="cooktype">oven</field>
             <field name="state">ready</field>
             <field name="recimage" type="base64" file="cook/static/src/img/cocatrampo_lq.png"/>
-            <field name="datetime_begin" eval="datetime.now()+timedelta(days=1)"/>
+            <field name="datetime_begin" eval="datetime.now()+timedelta(minutes=-120)"/>
         </record>
 
         <record id="recipe_2" model="cook.recipe">
@@ -18,7 +18,7 @@
             <field name="cooktype">none</field>
             <field name="state">started</field>
             <field name="recimage" type="base64" file="cook/static/src/img/trampo_lq.png"/>
-            <field name="datetime_begin" eval="datetime.now()+timedelta(days=2)"/>
+            <field name="datetime_begin" eval="datetime.now()+timedelta(minutes=-5)"/>
         </record>
 
         <record id="recipe_3" model="cook.recipe">
@@ -28,7 +28,7 @@
             <field name="cooktype">mix</field>
             <field name="state">not started</field>
             <field name="recimage" type="base64" file="cook/static/src/img/ensaladapasta_lq.png"/>
-            <field name="datetime_begin" eval="datetime.now()+timedelta(days=3)"/>
+            <field name="datetime_begin" eval="datetime.now()+timedelta(days=1)"/>
         </record>
 
         <record id="recipe_4" model="cook.recipe">
@@ -38,7 +38,7 @@
             <field name="cooktype">mix</field>
             <field name="state">not started</field>
             <field name="recimage" type="base64" file="cook/static/src/img/ensaladapatata_lq.png"/>
-            <field name="datetime_begin" eval="datetime.now()+timedelta(days=4)"/>
+            <field name="datetime_begin" eval="datetime.now()+timedelta(days=2)"/>
         </record>
 
    <record id='instructions_2' model='cook.instruction'>
