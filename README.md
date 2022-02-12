@@ -2,6 +2,10 @@
 
 Cooking module for Odoo 15.0. First version (8th of February 2022)
 
+<p align="center">
+<img src="static/description/cookodoodemo_red.gif" alt="drawing" width="600" >
+</p>
+
 **How the module works**
 + It has three classes:
   + A main **recipe** class whith One2Many relation with 
