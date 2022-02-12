@@ -31,6 +31,7 @@
                     <group>
                       <field name="name" />
                       <field name="description"/>
+                      <field name="state"/>
                       <field name="datetime_begin" string="Start date"/>
                       <field name="timelabor" string="time"/>
                       <field name="cooktype" string="cook type" widget="selection"/>
@@ -58,6 +59,49 @@
         </field>
     </record>
 
+    <record id="hr_kanban_view_cook" model="ir.ui.view">
+           <field name="name">cook.recipe.kanban</field>
+           <field name="model">cook.recipe</field>
+           <field name="priority">10</field>
+           <field name="arch" type="xml">
+               <kanban class="o_cook_recipe_kanban">
+                   <field name="state"/>
+                   <templates>
+                       <t t-name="kanban-box">
+                       <div class="oe_kanban_global_click o_kanban_record_has_image_fill o_hr_kanban_record">
+                           <field name="recimage" widget="image" class="o_kanban_image_fill_left" options="{'zoom': true, 'zoom_delay': 1000, 'background': true, 'preventClicks': false}"/>
+                            <div class="oe_kanban_details">
+                               <div class="o_kanban_record_top">
+                                   <div class="o_kanban_record_headings">
+                                       <strong class="o_kanban_record_title">
+
+                                            <div class="float-right" t-if="record.state.raw_value == 'ready'">
+                                                <span class="fa fa-circle text-success" role="img" aria-label="Ready" title="Ready" name="state_ready"></span>
+                                            </div>
+                                            <div class="float-right" t-if="record.state.raw_value == 'not started'">
+                                                <span class="fa fa-circle text-danger" role="img" aria-label="Not Started" title="Not Started" name="state_not_started"></span>
+                                            </div>
+                                            <div class="float-right" t-if="record.state.raw_value == 'started'">
+                                                <span class="fa fa-circle text-warning" role="img" aria-label="Started" title="Started" name="state_started"></span>
+                                            </div>
+
+                                            <field name="name" placeholder="recipe name"/>
+                                       </strong>
+                                       <span t-if="record.cooktype.raw_value" class="o_kanban_record_subtitle"><field name="cooktype"/></span>
+                                   </div>
+                               </div>
+                               <field name="ingredient_ids" widget="many2many_tags"/>
+                               <ul>
+                                   <li t-if="record.timelabor.raw_value" class="o_force_ltr"><field name="timelabor" /></li>
+                               </ul>
+                           </div>
+                       </div>
+                       </t>
+                   </templates>
+               </kanban>
+           </field>
+    </record>
+
     <!-- calendar view for recipes -->
     <record model="ir.ui.view" id="cook.recipe_calendar">
         <field name="name">cook recipe calendar</field>
@@ -65,17 +109,15 @@
         <field name="arch" type="xml">
             <calendar string="Recipe Calendar" date_start="datetime_begin" color="cooktype" mode="month">
                 <field name="name"/>
-                <!--<field name="cooktype"/>
-                <field name="description"/> -->
             </calendar>
         </field>
     </record>
 
-    <!-- actions opening tree, calendar and form views on models for recipes -->
+    <!-- actions opening tree, calendar, form and kanban views on models for recipes -->
     <record model="ir.actions.act_window" id="cook.recipe_action_window">
       <field name="name">cook window</field>
       <field name="res_model">cook.recipe</field>
-      <field name="view_mode">tree,calendar,form</field>
+      <field name="view_mode">tree,calendar,form,kanban</field>
       <field name="context">{'search_default_opened': True}</field>
     </record>
 
@@ -84,7 +126,7 @@
       <field name="res_model">cook.recipe</field>
       <field name="view_mode">calendar</field>
     </record>
-
+    
     <!-- explicit list (or tree) view definition for instructions -->
     <record model="ir.ui.view" id="cook.instruction_list">
       <field name="name">Instruction list</field>
