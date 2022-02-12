@@ -1,7 +1,7 @@
 <odoo>
   <data>
 
-    <!-- explicit list view definition -->
+    <!-- explicit list view definition for recipe -->
     <record model="ir.ui.view" id="cook.recipe_list">
       <field name="name">cook list</field>
       <field name="model">cook.recipe</field>
@@ -14,10 +14,12 @@
           <field name="timelabor" string="time elabor"/>
           <field name="cooktype" string="cook type"/>
           <field name="isvegan" string="is vegan"/>
+         <!-- <field name="ultraproc" string="Ultraprocessed"/> -->
         </tree>
       </field>
     </record>
 
+        <!-- explicit form view definition for recipe -->
     <record model="ir.ui.view" id="cook.recipe_form">
         <field name="name">cook form</field>
         <field name="model">cook.recipe</field>
@@ -43,7 +45,7 @@
                       <field name="ctreenuts" string="Tree Peanuts"/>
                       <field name="cwheat" string="Wheat"/>
                       <field name="csoybean" string="Soybeans"/>
-                      <field name="allergen" string="Allergen"/>
+                      <field name="allergen" string="allergen"/>
                     </group>
                   </group>
                   <group>
@@ -56,7 +58,7 @@
         </field>
     </record>
 
-    <!-- calendar view -->
+    <!-- calendar view for recipes -->
     <record model="ir.ui.view" id="cook.recipe_calendar">
         <field name="name">cook recipe calendar</field>
         <field name="model">cook.recipe</field>
@@ -69,7 +71,7 @@
         </field>
     </record>
 
-    <!-- actions opening views on models -->
+    <!-- actions opening tree, calendar and form views on models for recipes -->
     <record model="ir.actions.act_window" id="cook.recipe_action_window">
       <field name="name">cook window</field>
       <field name="res_model">cook.recipe</field>
@@ -83,6 +85,7 @@
       <field name="view_mode">calendar</field>
     </record>
 
+    <!-- explicit list (or tree) view definition for instructions -->
     <record model="ir.ui.view" id="cook.instruction_list">
       <field name="name">Instruction list</field>
       <field name="model">cook.instruction</field>
@@ -97,15 +100,32 @@
       </field>
     </record>
 
-    <!-- actions opening views on models -->
+    <!-- Search view for instructions -->
+    <record id="cook.instruction_search_view"  model="ir.ui.view">
+      <field name="model">cook.instruction</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="step"/>
+          <field name="description"/>
+          <field name="recipe_id" string="recipe"/>
+          <field name="timeinstr" string="time"/>
+            <group string="Group By">
+            <filter name="group_by_recipe" string="recipe" context="{'group_by': 'recipe_id'}"/>
+            </group>
+        </search>
+      </field>
+    </record>
 
+    <!-- actions opening tree and search views on models for Instructions-->
     <record model="ir.actions.act_window" id="cook.instruction_action_window">
       <field name="name">cooking instruction action</field>
       <field name="res_model">cook.instruction</field>
-      <field name="view_mode">tree</field>
+      <field name="view_mode">tree,search</field>
+      <field name="context">{'search_default_group_by_recipe': True}</field>
     </record>
 
-      <!-- tree view for Ingredients-->
+      <!-- tree view for Ingredient-->
     <record model="ir.ui.view" id="cook.ingredient_list">
       <field name="name">Ingredient list</field>
       <field name="model">cook.ingredient</field>
@@ -113,7 +133,7 @@
         <tree>
           <field name="name"/>
           <field name="calories"/>
-          <!--<field name="units" /> -->
+          <field name="recipe_ids" string="Recipes"/>
           <field name="description"/>
         </tree>
       </field>
@@ -144,33 +164,33 @@
       </field>
     </record>
 
+    <!-- Search view for ingredients -->
+    <record id="cook.ingredient_search_view"  model="ir.ui.view">
+      <field name="model">cook.ingredient</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="calories"/>
+          <field name="recipe_ids" string="Recipes"/>
+          <field name="description"/>
+            <group string="Group By">
+            <filter name="group_by_Recipes" context="{'group_by': 'recipe_ids'}"/>
+            </group>
+        </search>
+      </field>
+    </record>
+
 
     <!-- actions for Ingredients-->
-
     <record model="ir.actions.act_window" id="cook.ingredient_action_window">
       <field name="name">cook ingredient action</field>
       <field name="res_model">cook.ingredient</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">tree,form,search</field>
+      <field name="context">{'search_default_group_by_recipes': True}</field>
     </record>
 
-    <!-- server action to the one above -->
-<!--
-    <record model="ir.actions.server" id="recetas.action_server">
-      <field name="name">recetas server</field>
-      <field name="model_id" ref="model_recetas_recetas"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
--->
 
     <!-- Top menu item -->
-
     <menuitem name="cook" id="cook.menu_root" web_icon="cook,static/description/icon.png"/>
 
     <!-- menu categories -->
@@ -178,11 +198,11 @@
     <menuitem name="Recipes" id="cook.menu_1b" parent="cook.menu_root" sequence="1" action="cook.recipe_action_window"/>
     <menuitem name="Calendar" id="cook.menu_1a" parent="cook.menu_root" sequence="3"
               action="cook.recipe_calendar_action_window"/>
+
     <!-- actions -->
     <menuitem name="Ingredients" id="cook.menu_3_1" parent="cook.menu_3" sequence="5"
               action="cook.ingredient_action_window"/>
     <menuitem name="Instructions" id="cook.menu_3_2" parent="cook.menu_3" sequence="6"
               action="cook.instruction_action_window"/>
-
   </data>
 </odoo>
