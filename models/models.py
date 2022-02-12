@@ -3,8 +3,6 @@
 from odoo import models, fields, api
 from datetime import date, timedelta
 
-
-
 class recipe(models.Model):
      _name = 'cook.recipe'
      _description = 'Cooking recipes'
