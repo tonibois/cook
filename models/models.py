@@ -4,12 +4,14 @@ from odoo import models, fields, api
 from datetime import date, timedelta
 
 
+
 class recipe(models.Model):
      _name = 'cook.recipe'
      _description = 'Cooking recipes'
 
      name = fields.Char()
      description = fields.Text()
+     recimage = fields.Image()
      datetime_begin = fields.Datetime('Datetime', default=fields.datetime.now())
      datetime_end = fields.Datetime(compute="_date_end", store=True)
      timelabor = fields.Integer() #compute='_compute_time_lab', store=True)
@@ -49,6 +51,7 @@ class ingredient(models.Model):
      carbh = fields.Float()
      protein =fields.Float()
      fat = fields.Float()
+     #units = fields.Integer()
      amount = fields.Float(help="Must be expressed in g")
      recipe_ids = fields.Many2many('cook.recipe',string='recipes')
 
@@ -61,6 +64,7 @@ class instruction(models.Model):
      _description='cooking instructions'
 
      name = fields.Char()
+     #amount=fields.Integer()
      description = fields.Text()
      step = fields.Integer()
      recipe_id = fields.Many2one('cook.recipe', string='recipe')
