@@ -3,6 +3,7 @@
 from odoo import models, fields, api
 from datetime import date, timedelta
 
+
 class recipe(models.Model):
      _name = 'cook.recipe'
      _description = 'Cooking recipes'
@@ -12,23 +13,21 @@ class recipe(models.Model):
      datetime_begin = fields.Datetime('Datetime', default=fields.datetime.now())
      datetime_end = fields.Datetime(compute="_date_end", store=True)
      timelabor = fields.Integer() #compute='_compute_time_lab', store=True)
-#     timeinstr = fields.Integer(related='instruction_ids.timeinstr', store=True)
      ingredient_ids = fields.Many2many('cook.ingredient', string='ingredients')
      instruction_ids = fields.One2many('cook.instruction','recipe_id', string='instructions')
-#     amount_ids = fields.Many2many('cook.amount', string='amounts')
      employee_ids= fields.Many2many('hr.employee', string='Employee')
-     cooktype = fields.Selection([('micro', 'Microwave'), ('grill', 'Grill'), ('oven', 'Oven'), ('none','None'), ('mix','Mixture')], string='Cook type', default='none')
+     cooktype = fields.Selection([('micro', 'Microwave'), ('grill', 'Grill'), ('oven', 'Oven'), ('none','None'), ('mix','Mixture'), ('boil','Boil'), ('fry','Fry'),('Other','Other')], string='Cook type', default='none')
      state = fields.Selection([('not started', 'Not started'), ('started', 'Started'), ('heating', 'Heating'), ('ready','Ready'), ('eated','Eated')], string='State', default='not started')
-     isvegan = fields.Boolean('Vegan', default=False)
-     ultraproc = fields.Boolean('Ultraprocessed', default=False)
-     cmilk = fields.Boolean('Milk',default=False)
-     ceggs = fields.Boolean('Eggs',default=False)
-     cfish = fields.Boolean('Fish',default=False)
-     cshellfish = fields.Boolean('Shell Fish',default=False)
-     ctreenuts= fields.Boolean('Tree nuts',default=False)
-     cpeanuts = fields.Boolean('Peanuts',default=False)
-     cwheat =fields.Boolean('Wheat',default=False)
-     csoybean=fields.Boolean('Soybeans',default=False)
+     isvegan = fields.Boolean('Vegan')#, default=False)
+     ultraproc = fields.Boolean('Ultraprocessed')#, default=False)
+     cmilk = fields.Boolean('Milk')#, default=True)
+     ceggs = fields.Boolean('Eggs')#, default=True)
+     cfish = fields.Boolean('Fish')#, default=True)
+     cshellfish = fields.Boolean('Shell Fish')#, default=False)
+     ctreenuts= fields.Boolean('Tree nuts')#, default=False)
+     cpeanuts = fields.Boolean('Peanuts')#, default=False)
+     cwheat =fields.Boolean('Wheat')#, default=False)
+     csoybean=fields.Boolean('Soybeans')#, default=False)
      allergen=fields.Boolean(compute="_allerg", store=True)
 
      @api.onchange('datetime_begin')
@@ -50,9 +49,7 @@ class ingredient(models.Model):
      carbh = fields.Float()
      protein =fields.Float()
      fat = fields.Float()
-     #units = fields.Integer()
-     amount = fields.Float()
-     #help="Must be expressed in g")
+     amount = fields.Float(help="Must be expressed in g")
      recipe_ids = fields.Many2many('cook.recipe',string='recipes')
 
      @api.onchange('carbh','protein','fat','amount')
