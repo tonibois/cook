@@ -19,7 +19,7 @@ Cooking module for Odoo 15.0. First version (8th of February 2022)
 + Computation of calories based on protein/fat/carbohydrates and amount of food: 
 
 ```math
-calories = frac{(carbohydrates*4 + protein*4 + fat*9 ) * amount}{100}
+calories = (carbohydrates*4 + protein*4 + fat*9 ) * amount / 100
 ```
 + Demo example of four recipes with instructions (only one of the recipes) and ingredients.
 + Translation languages available: Spanish and Catalan.
