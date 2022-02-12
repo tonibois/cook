@@ -19,8 +19,9 @@ Cooking module for Odoo 15.0. First version (8th of February 2022)
 **Derived ER diagram (from DBeaver access to postgres DB):**
 ------
 
-
+<p align="center">
 <img src="static/description/Cook_ER_diagram.png" alt="drawing" width="300" style="margin:0px 500px">
+</p>
 
 <!-- ![A test image](static/description/Cook_ER_diagram.png) -->
 
