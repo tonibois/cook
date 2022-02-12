@@ -16,7 +16,7 @@ Cooking module for Odoo 15.0. First version (8th of February 2022)
 + Demo example of four recipes with instructions (only one of the recipes) and ingredients
 + Translation languages available: Spanish and Catalan
 
-**Derived ER diagram (from DBeaver access to postgres DB):**
+**Derived ER diagram (from DBeaver access to postgres DB)**
 ------
 
 <p align="center">
@@ -25,7 +25,7 @@ Cooking module for Odoo 15.0. First version (8th of February 2022)
 
 <!-- ![A test image](static/description/Cook_ER_diagram.png) -->
 
-### To install this module:
+### To install this module
 
 1. Download the project: 
  + Using git:   git clone https://github.com/tonibois/cook.git
@@ -39,7 +39,7 @@ Cooking module for Odoo 15.0. First version (8th of February 2022)
 8. You must see the Cook module
 9. Install the cook module
 
-### After installing the module set security settings:
+### After installing the module set security settings
 
 If not seen automatically the module, you can login as superuser.
 
@@ -60,5 +60,5 @@ To see the module on the menu after installation you can edit Access Rights to t
 <img src="static/description/ModuleInterface.png" alt="drawing" width="700"/>
 
 
-**Note: To make @api decorators working properly, after installation of the module you can change the @api.onchange to @api.depends on calories and allergen functions**
+*Note: To make @api decorators working properly, after installation of the module you can change the @api.onchange to @api.depends on calories and allergen functions*
 
