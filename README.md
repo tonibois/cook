@@ -20,7 +20,7 @@ Cooking module for Odoo 15.0. First version (8th of February 2022)
 ------
 
 
-<img src="static/description/Cook_ER_diagram.png" alt="drawing" width="300" style="margin:10px 300px/>
+<img src="static/description/Cook_ER_diagram.png" alt="drawing" width="300" style="margin:10px 300px">
 
 <!-- ![A test image](static/description/Cook_ER_diagram.png) -->
 
