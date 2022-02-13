@@ -35,6 +35,7 @@
                       <field name="datetime_begin" string="Start date"/>
                       <field name="timelabor" string="time"/>
                       <field name="cooktype" string="cook type" widget="selection"/>
+                      <field name="recimage" string ="Recipe" widget="image" class="o_kanban_image_fill_left"/>
                     </group>
                     <group>
                       <field name="isvegan" string="Is vegan"/>
@@ -49,11 +50,15 @@
                       <field name="allergen" string="allergen"/>
                     </group>
                   </group>
+                  
+                  <!--
                   <group>
                     <field name="instruction_ids" colspan="4"/>
                     <field name="ingredient_ids"/>
-                     <!-- <field name="amount_ids" /> -->
+                    <field name="amount_ids" /> 
                   </group>
+                  -->
+                  
                 </sheet>
             </form>
         </field>
