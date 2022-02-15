@@ -70,3 +70,6 @@ To see the module on the menu after installation you can edit Access Rights to t
 
 *Note: To make @api decorators working properly, after installation of the module you can change the @api.onchange to @api.depends on calories and allergen functions*
 
+### For further details, you can check the full explanation (spanish)
+
+<video autoplay src="https://www.youtube.com/watch?v=XP9HamA7IGQ"/>
