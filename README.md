@@ -72,4 +72,4 @@ To see the module on the menu after installation you can edit Access Rights to t
 
 ### For further details, you can check the full explanation (spanish)
 
-<a href="{https://www.youtube.com/watch?v=XP9HamA7IGQ}" title="Module construction"></a>
+[![Alternate Text]({https://www.youtube.com/watch?v=XP9HamA7IGQ})]({video-url} "Cook module")
