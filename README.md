@@ -72,4 +72,4 @@ To see the module on the menu after installation you can edit Access Rights to t
 
 ### For further details, you can check the full explanation (spanish)
 
-<video autoplay src="https://www.youtube.com/watch?v=XP9HamA7IGQ"/>
+<a href="{https://www.youtube.com/watch?v=XP9HamA7IGQ}" title="Module construction"></a>
