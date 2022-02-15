@@ -24,7 +24,7 @@ calories = (carbohydrates*4 + protein*4 + fat*9 ) * amount / 100
 + Demo example of four recipes with instructions (only one of the recipes) and ingredients.
 + Translation languages available: Spanish and Catalan.
 
-**Derived ER diagram (from DBeaver access to postgres DB)**
+**Derived ER diagram (from DBeaver access to postgres odoo DB after installing cook module)**
 ------
 
 <p align="center">
