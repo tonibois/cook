@@ -72,4 +72,4 @@ To see the module on the menu after installation you can edit Access Rights to t
 
 ### For further details, you can check the full explanation (spanish)
 
-[![Alternate Text]({static/description/icon.png})]({https://www.youtube.com/watch?v=XP9HamA7IGQ} "Cook module")
+[![Cook module]({static/description/icon.png})]({https://www.youtube.com/watch?v=XP9HamA7IGQ} "Cook module")
