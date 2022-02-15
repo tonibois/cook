@@ -47,7 +47,7 @@ calories = (carbohydrates*4 + protein*4 + fat*9 ) * amount / 100
 8. You must see the Cook module
 9. Install the cook module
 
-### After installing the module set security settings
+### After installing the module set security settings (if required)
 
 If not seen automatically the module, you can login as superuser.
 
