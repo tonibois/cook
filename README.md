@@ -72,4 +72,5 @@ To see the module on the menu after installation you can edit Access Rights to t
 
 ### For further details, you can check the full explanation (spanish)
 
-[![Cook module]]({https://www.youtube.com/watch?v=XP9HamA7IGQ} "Cook module")
+[Cook module video demonstration](https://www.youtube.com/watch?v=XP9HamA7IGQ).
+
