@@ -199,6 +199,7 @@
           <field name="carbh">0</field>
           <field name="protein">0</field>
           <field name="fat">100</field>
+          <field name="amount">13.5</field>             
         </record>
 
          <record id="ingredients_3_1" model="cook.ingredient">
@@ -208,11 +209,12 @@
           <field name="carbh">66</field>
           <field name="protein">12</field>
           <field name="fat">2</field>
+          <field name="amount">60</field>             
         </record>
 
          <record id="ingredients_3_2" model="cook.ingredient">
           <field name="name">atún</field>
-          <field name="description">1 lata en aceite de oliva no escurrido o en agua para una dieta baja en calorías</field>
+          <field name="description">Una lata en aceite de oliva no escurrido o en agua para una dieta baja en calorías</field>
           <field name="recipe_ids" eval="[(6, 0, [ref('recipe_1'), ref('recipe_2'), ref('recipe_3'), ref('recipe_4')])]"/>
           <field name="carbh">1</field>
           <field name="protein">19</field>
