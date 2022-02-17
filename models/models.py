@@ -30,14 +30,15 @@ class recipe(models.Model):
      csoybean=fields.Boolean('Soybeans')#, default=False)
      allergen=fields.Boolean(compute="_allerg", store=True)
 
-     @api.onchange('datetime_begin')
+     @api.depends('datetime_begin')
      def _date_end(self):
          for record in self:
              record.datetime_end = record.datetime_begin + timedelta(minutes=record.timelabor)
 
-     @api.onchange('cshellfish','cpeanuts','cwheat','ceggs','cmilk','cfish','csoybean','ctreenuts')
+     @api.depends('cshellfish','cpeanuts','cwheat','ceggs','cmilk','cfish','csoybean','ctreenuts')
      def _allerg(self):
-          self.allergen = self.cshellfish or self.cwheat or self.cpeanuts or self.cmilk or self.ceggs or self.cfish or self.csoybean or self.ctreenuts
+         for record in self:
+             record.allergen = record.cshellfish or record.cwheat or record.cpeanuts or record.cmilk or record.ceggs or record.cfish or record.csoybean or record.ctreenuts
 
 class ingredient(models.Model):
      _name ='cook.ingredient'
@@ -53,9 +54,10 @@ class ingredient(models.Model):
      amount = fields.Float(help="Must be expressed in g")
      recipe_ids = fields.Many2many('cook.recipe',string='recipes')
 
-     @api.onchange('carbh','protein','fat','amount')
+     @api.depends('carbh','protein','fat','amount')
      def _calcomp(self):
-          self.calories = ( self.carbh*4 + self.protein*4 + self.fat*9 ) *self.amount / 100
+         for record in self:
+               record.calories = ( record.carbh*4 + record.protein*4 + record.fat*9 ) *record.amount / 100
 
 class instruction(models.Model):
      _name='cook.instruction'
