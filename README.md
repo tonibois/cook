@@ -50,19 +50,10 @@ calories = (carbohydrates*4 + protein*4 + fat*9 ) * amount / 100
 
 If not seen automatically the module, you can login as superuser.
 
-To see the module on the menu after installation you can edit Access Rights to the models:
-
-1. Go to: 
- + Settings --> Technical --> Acces Rights 
-2. Set the next permissions 
-
-<img src="static/description/set_AR.png" alt="drawing" width="700"/>
-
-<!-- ![set_permiss](static/description/set_AR.png) -->
-
-3. Refresh your web browser
-
-4. You must see it in your list of Apps
+1. Refresh your web browser
+2. Restart Odoo service
+3. Update & Updat apps List
+3. You must see it in your list of Apps
 
 <img src="static/description/ModuleInterface.png" alt="drawing" width="700"/>
 
