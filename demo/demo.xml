@@ -215,7 +215,7 @@
          <record id="ingredients_3_2" model="cook.ingredient">
           <field name="name">atún</field>
           <field name="description">Una lata en aceite de oliva no escurrido o en agua para una dieta baja en calorías</field>
-          <field name="recipe_ids" eval="[(6, 0, [ref('recipe_1'), ref('recipe_2'), ref('recipe_3'), ref('recipe_4')])]"/>
+          <field name="recipe_ids" eval="[(6, 0, [ref('recipe_3'), ref('recipe_4')])]"/>
           <field name="carbh">1</field>
           <field name="protein">19</field>
           <field name="fat">31</field>
@@ -226,7 +226,7 @@
          <record id="ingredients_3_3" model="cook.ingredient">
           <field name="name">aceitunas</field>
           <field name="description">Rellenas de anchoa, en bote pequeño</field>
-          <field name="recipe_ids" eval="[(6, 0, [ref('recipe_1'), ref('recipe_2'), ref('recipe_3'), ref('recipe_4')])]"/>
+          <field name="recipe_ids" eval="[(6, 0, [ref('recipe_2'), ref('recipe_3'), ref('recipe_4')])]"/>
           <field name="carbh">0.9</field>
           <field name="protein">1.6</field>
           <field name="fat">15</field>
@@ -237,7 +237,7 @@
          <record id="ingredients_3_4" model="cook.ingredient">
           <field name="name">Un puñado de nueces</field>
           <field name="description">fruto seco con alto contenido en grasas saludables</field>
-          <field name="recipe_ids" eval="[(6, 0, [ref('recipe_1'), ref('recipe_2'), ref('recipe_3'), ref('recipe_4')])]"/>
+          <field name="recipe_ids" eval="[(6, 0, [ref('recipe_3')])]"/>
           <field name="carbh">2.2</field>
           <field name="protein">17</field>
           <field name="fat">70</field>
