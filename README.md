@@ -52,8 +52,8 @@ If not seen automatically the module, you can login as superuser.
 
 1. Refresh your web browser
 2. Restart Odoo service
-3. Update & Updat apps List
-3. You must see it in your list of Apps
+3. Update apps
+4. You must see it in your list of Apps
 
 <img src="static/description/ModuleInterface.png" alt="drawing" width="700"/>
 
