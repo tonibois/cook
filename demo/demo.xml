@@ -235,7 +235,7 @@
         </record>
 
          <record id="ingredients_3_4" model="cook.ingredient">
-          <field name="name">1 puñado de nueces</field>
+          <field name="name">Un puñado de nueces</field>
           <field name="description">fruto seco con alto contenido en grasas saludables</field>
           <field name="recipe_ids" eval="[(6, 0, [ref('recipe_1'), ref('recipe_2'), ref('recipe_3'), ref('recipe_4')])]"/>
           <field name="carbh">2.2</field>
@@ -258,7 +258,7 @@
 
          <record id="ingredients_4_2" model="cook.ingredient">
           <field name="name">patata</field>
-          <field name="description">El patató (patata pequeña, 125g) se hace más rápidamente, se recomienda patata de sa Pobla (grande, unos 300 g). Mediana unos 200 g</field>
+          <field name="description">Una patata tipo patató (patata pequeña, 125g), que se hace más rápidamente, se recomienda patata de sa Pobla (grande, unos 300 g). Mediana unos 200 g</field>
           <field name="recipe_ids" eval="[(6, 0, [ref('recipe_4')])]"/>
           <field name="carbh">15.7</field>
           <field name="protein">1.7</field>
