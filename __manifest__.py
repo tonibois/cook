@@ -25,6 +25,7 @@
     'data': [
         'views/views.xml',
         'views/templates.xml',
+        'report/cook_report.xml',
         'security/security.xml',
         'security/ir.model.access.csv'
     ],
