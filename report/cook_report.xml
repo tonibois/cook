@@ -17,19 +17,11 @@
                     Recipe:
                     <span t-field="doc.name"/>
                 </h2>
-
-             <!--   <img t-att-src="'data:image/png;base64,%s' % to_text(doc.recimage)"/>  -->
-             <!--   <span t-field="doc.recimage" t-field-options="{'widget': 'image'}"/>   
-                <img t-attf-src="data:image/*;base64,{{recipe.recimage}}"
-                t-att-alt="recipe.name"
-                /> 
-                  --> 
+                
             <p></p> 
-
               <div id="picture" class="text-center">
                  <img t-attf-src="data:image/png;base64,{{doc.recimage}}" class="center" style="width:200px; height:200px;"/>
               </div> 
-
             <p></p>
 
                 <div class="row mt32 mb32">
